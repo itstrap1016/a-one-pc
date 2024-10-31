@@ -1,0 +1,80 @@
+/* reset.css */
+
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML5 요소 스타일 초기화 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 링크 스타일 초기화 */
+a {
+  text-decoration: none;
+  color: inherit; /* 링크 색상을 상속받도록 설정 */
+}
+
+/* 리스트 스타일 초기화 */
+ul,
+ol {
+  list-style: none; /* 리스트 스타일 제거 */
+}
+
+/* 테이블 스타일 초기화 */
+table {
+  border-collapse: collapse; /* 테이블 경계 겹치기 제거 */
+  border-spacing: 0; /* 테이블 셀 간격 제거 */
+}
+
+/* 이미지 및 비디오 스타일 초기화 */
+img,
+video {
+  max-width: 100%; /* 반응형 설정 */
+  height: auto; /* 비율 유지 */
+}
+
+/* 폰트 및 텍스트 스타일 초기화 */
+body {
+  line-height: 1.5; /* 기본 줄 높이 설정 */
+  font-family: Arial, sans-serif; /* 기본 폰트 설정 */
+}
+
+body * {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* 기타 기본 스타일 초기화 */
+button,
+input,
+select,
+textarea {
+  font-family: inherit; /* 폰트를 상속받도록 설정 */
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

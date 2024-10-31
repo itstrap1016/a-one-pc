@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>에이원 CC - PC</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/fullpage.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <ul class="left_section">
+          <li>
+            <a href="#">LOGIN</a>
+          </li>
+          <li>
+            <a href="#">MY PAGE</a>
+          </li>
+          <li>
+            <a href="#">LOCATION</a>
+          </li>
+        </ul>
+        <a href="#intro" class="top_logo">
+          <img src="./img/logo.svg" alt="로고 이미지" />
+        </a>
+        <button class="hamburger_btn">
+          <img src="./img/hamburger.svg" alt="햄버거 메뉴" />
+        </button>
+      </nav>
+    </header>
+    <nav id="quick_menu">
+      <button type="button" class="slide_btn">
+        <img src="./img/slide_btn_arrow.png" alt="arrow" />
+      </button>
+      <ul class="menu">
+        <li class="reserv">
+          <button>
+            <img src="./img/reserv.png" alt="예약하기" />
+            <span>예약하기</span>
+          </button>
+        </li>
+        <li class="reserv_check">
+          <button type="button">
+            <img src="./img/reser_check.png" alt="예약조회" />
+            <span>예약조회</span>
+          </button>
+        </li>
+        <li class="weather">
+          <ul>
+            <li>
+              <img src="./img/sun.png" alt="날씨 이미지" />
+              <span class="day">09.25(수)</span>
+              <span class="temp">25.0℃</span>
+            </li>
+            <li>
+              <img src="./img/cloud.png" alt="날씨 이미지" />
+              <span class="day">09.26(목)</span>
+              <span class="temp">22.5℃</span>
+            </li>
+            <li>
+              <img src="./img/cloud.png" alt="날씨 이미지" />
+              <span class="day">09.27(금)</span>
+              <span class="temp">22.5℃</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <nav id="global_nav">
+      <ul>
+        <li class="intro_list">
+          <a href="#intro">Intro</a>
+        </li>
+        <li class="east_course_list">
+          <a href="#east_course">East Course</a>
+        </li>
+        <li class="south_course_list">
+          <a href="#south_course">South Course</a>
+        </li>
+        <li class="west_course_list">
+          <a href="#west_course">West Course</a>
+        </li>
+        <li class="family_site_list">
+          <a href="#family_site">Family Site</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="pc_pop_up">
+      <div class="bg"></div>
+      <div class="window">
+        <div class="header">
+          <h2>예약하기</h2>
+          <button type="button">
+            <img src="./img/pop_up_close.png" alt="close img" />
+          </button>
+        </div>
+        <div class="content">
+          <div class="calendar">
+            <input type="text" id="datepicker" placeholder="날짜 선택" />
+          </div>
+          <div class="tab_time_table">
+            <ul class="tab">
+              <li>
+                <button type="button" class="active_now">EAST(동코스)</button>
+              </li>
+              <li>
+                <button type="button">SOUTH(남코스)</button>
+              </li>
+              <li>
+                <button type="button">WEST(서코스)</button>
+              </li>
+            </ul>
+            <div class="time_table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>시간</th>
+                    <th>홀</th>
+                    <th>인원</th>
+                    <th>1인 그린피</th>
+                    <th>예약</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>06:24</td>
+                    <td>18홀</td>
+                    <td>
+                      <select>
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4" selected>4일</option>
+                        <option value="5">5일</option>
+                      </select>
+                    </td>
+                    <td>160,00</td>
+                    <td>
+                      <button type="button" disabled>예약불가</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>06:24</td>
+                    <td>18홀</td>
+                    <td>
+                      <select>
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4" selected>4일</option>
+                        <option value="5">5일</option>
+                      </select>
+                    </td>
+                    <td>160,00</td>
+                    <td>
+                      <button type="button">예약</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>06:24</td>
+                    <td>18홀</td>
+                    <td>
+                      <select>
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4" selected>4일</option>
+                        <option value="5">5일</option>
+                      </select>
+                    </td>
+                    <td>160,00</td>
+                    <td>
+                      <button type="button" disabled>예약불가</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>06:24</td>
+                    <td>18홀</td>
+                    <td>
+                      <select>
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4" selected>4일</option>
+                        <option value="5">5일</option>
+                      </select>
+                    </td>
+                    <td>160,00</td>
+                    <td>
+                      <button type="button">예약</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>06:24</td>
+                    <td>18홀</td>
+                    <td>
+                      <select>
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4" selected>4일</option>
+                        <option value="5">5일</option>
+                      </select>
+                    </td>
+                    <td>160,00</td>
+                    <td>
+                      <button type="button" disabled>예약불가</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>06:24</td>
+                    <td>18홀</td>
+                    <td>
+                      <select>
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4" selected>4일</option>
+                        <option value="5">5일</option>
+                      </select>
+                    </td>
+                    <td>160,00</td>
+                    <td>
+                      <button type="button">예약</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>06:24</td>
+                    <td>18홀</td>
+                    <td>
+                      <select>
+                        <option value="1">1일</option>
+                        <option value="2">2일</option>
+                        <option value="3">3일</option>
+                        <option value="4" selected>4일</option>
+                        <option value="5">5일</option>
+                      </select>
+                    </td>
+                    <td>160,00</td>
+                    <td>
+                      <button type="button">예약</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="fullpage">
+      <div class="section intro">
+        <div class="center_text animation_text">
+          <h1>GRACE & IMPRESSION</h1>
+          <div class="line"></div>
+          <p>한번의 라운딩으로 평생 잊지 못할 감동을 드립니다.</p>
+        </div>
+      </div>
+      <div class="section east_course">
+        <div class="common_center_text animation_text">
+          <div class="left_section">
+            <h2>EAST COURSE</h2>
+            <div class="texts">
+              <h3>기준을 탈피한 정형화된 고난도 코스</h3>
+              <p>
+                진정한 골퍼라면 놓칠 수 없는 감동이 있습니다. 자연 지형과
+                어우러진 강하고 도전적인 남성적인 코스로 국제규격을 상회한 국내
+                최장거리의 홀 구성은 플레이어의 고정관념을 탈피한 고난도 베스트
+                코스 입니다.
+              </p>
+            </div>
+          </div>
+          <div class="right_section">
+            <a class="view" href="#">
+              <span>VIEW</span>
+              <div class="arrow_right"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="section south_course">
+        <div class="common_center_text animation_text">
+          <div class="left_section">
+            <h2>SOUTH COURSE</h2>
+            <div class="texts">
+              <h3>천연지세에 묻힌 신세대 조형감각의 코스</h3>
+              <p>
+                자연에 도전하면서 자연과 하나되는 아름다운 코스능선의 지형에
+                따라 전 코스가 남향 배치된 홀 구성은 정교한 플레이를 유도하는
+                변화무쌍한 코스입니다.
+              </p>
+            </div>
+          </div>
+          <div class="right_section">
+            <a class="view" href="#">
+              <span>VIEW</span>
+              <div class="arrow_right"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="section west_course">
+        <div class="common_center_text animation_text">
+          <div class="left_section">
+            <h2>WEST COURSE</h2>
+            <div class="texts">
+              <h3>서구적인 스타일의 전략형 패널리즘 코스</h3>
+              <p>
+                경관에 매료되어 라운딩을 잠시 잊게 하는 감성적인 코스공략루트를
+                설정 공격적인 플레이가 요구되는 코스입니다.
+              </p>
+            </div>
+          </div>
+          <div class="right_section">
+            <a class="view" href="#">
+              <span>VIEW</span>
+              <div class="arrow_right"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="section family_site">
+        <div class="links">
+          <div class="left_section">
+            <a class="half_img" href="#">
+              <div class="texts">
+                <h2>ADONIS COUNTRY CLUB</h2>
+                <p>자연과 예술이 어울러진 시인의 감수성을 간직한 코스</p>
+              </div>
+              <img src="./img/adonis_country_club.png" alt="bg image" />
+            </a>
+            <a class="half_img" href="#">
+              <div class="texts">
+                <h2>DEBEACH GOLF CLUB</h2>
+                <p>
+                  3면의 바다가 눈앞으로 펼쳐진 정통 유러피안 골프코스를 귀하에게
+                  선사합니다
+                </p>
+              </div>
+              <img src="./img/golf_club.png" alt="bg image" />
+            </a>
+          </div>
+          <a class="right_section" href="#">
+            <div class="texts">
+              <h2>ADONIS Art Hill</h2>
+              <p>사계절의 아름다움이 녹아있는 아도니스 호텔</p>
+            </div>
+            <img src="./img/adonis_art_hill.png" alt="bg image" />
+          </a>
+        </div>
+        <footer>
+          <div class="left-section">
+            <img src="./img/footer_logo.png" alt="logo image" />
+          </div>
+          <div class="middle_section">
+            <p>
+              626-840 경남 양산시 매곡동 산1지 | TEL. 055-371-3500 | FAX.
+              055-367-9839<br />
+              사업자등록번호 : 621-81-09277 | 대표이사 : 이경재<br />
+              Copyright(C)2017 A-ONE COUNTRY CLUB. All rights reserved
+            </p>
+          </div>
+          <div class="right_section">
+            <div>
+              <a href="#">개인정보취급방침 |</a>
+              <a href="#">이메일무단수집거부 |</a>
+              <a href="#">고객의 소리</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.30/fullpage.min.js"
+      integrity="sha512-XjHDYXqFXd3cWle8uxMnQFVcpjzm+mWZfJApBAyREtai0v/jJy9Na+PJlmrnaum7qb4B3BnwKAZd47piZRvoZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/monthSelect/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ko.js"></script>
+    <script src="./js/init.js"></script>
+  </body>
+</html>
