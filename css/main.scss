@@ -205,7 +205,6 @@
         #datepicker {
           display: none;
         }
-
         .flatpickr-calendar {
           color: #222;
           box-shadow: none;
@@ -219,6 +218,13 @@
                 font-size: 20px;
                 font-weight: 500;
                 color: #222;
+                appearance: none;
+
+                &:disabled {
+                  color: #222;
+                  pointer-events: none;
+                  opacity: 1;
+                }
               }
               .numInputWrapper {
                 width: 70px;
@@ -244,6 +250,21 @@
               font-weight: 500;
               background-color: #2fb400;
               border-color: #2fb400;
+            }
+            &.highlighted {
+              position: relative;
+
+              &::after {
+                content: "";
+                display: inline-block;
+                width: 4px;
+                height: 4px;
+                background-color: orange;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+              }
             }
           }
         }
@@ -471,6 +492,7 @@
       display: flex;
       max-width: 70vw;
       max-height: 720px;
+      min-width: 994px;
 
       .left_section {
         width: 50%;
