@@ -6,7 +6,6 @@
   z-index: 100;
   width: 100%;
   padding: 40px 60px;
-  min-width: 1400px;
 
   nav {
     display: flex;
@@ -180,6 +179,18 @@
     height: 100%;
   }
 
+  .header {
+    background-color: #009850;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 24px;
+
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
   .window {
     position: absolute;
     top: 50%;
@@ -187,18 +198,6 @@
     transform: translate(-50%, -50%);
     background-color: white;
     width: 840px;
-
-    .header {
-      background-color: #009850;
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 24px;
-
-      h2 {
-        font-size: 24px;
-        font-weight: 500;
-      }
-    }
     .content {
       padding: 20px 24px;
       display: flex;
@@ -356,6 +355,71 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  .reserv_info_check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 250;
+    width: 420px;
+    display: none;
+
+    &.active_now {
+      display: block;
+    }
+
+    .header {
+      background-color: orange;
+    }
+    .content {
+      background-color: white;
+      padding: 20px 24px;
+
+      .txts {
+        .txt {
+          display: flex;
+          gap: 10px;
+          margin-bottom: 15px;
+          p {
+            font-size: 18px;
+            color: #222;
+
+            &.highlighted {
+              font-weight: 500;
+            }
+            &:first-child {
+              width: 100px;
+              font-weight: 500;
+            }
+            &:nth-child(2) {
+              color: #666;
+            }
+          }
+        }
+      }
+      .btns {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        button {
+          color: #222;
+
+          &.reserv_btn {
+            font-size: 18px;
+            color: #2fb400;
+            font-weight: 500;
+          }
+
+          &.cancel_btn {
+            font-size: 18px;
+            color: #222;
           }
         }
       }
@@ -664,6 +728,90 @@
   }
 }
 
+// 헤더 반응형 처리
+@media (max-width: 1000px) {
+  #header {
+    nav {
+      .left_section {
+        display: none;
+      }
+      .top_logo {
+        position: initial;
+        transform: translateX(0);
+      }
+      .hamburger_btn {
+        padding-top: 0;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #header {
+    padding: 20px;
+    nav {
+      .top_logo {
+        width: 100px;
+        height: 38px;
+        img {
+        }
+      }
+      .hamburger_btn {
+        img {
+          content: url("/img/hamburger_mob.png");
+        }
+      }
+    }
+    &.white_bg {
+      nav {
+        .hamburger_btn {
+          img {
+            content: url("/img/hamburger_black_mob.png");
+          }
+        }
+      }
+    }
+  }
+}
+
+// 글로벌 네비게이션 반응형 처리
+@media (max-width: 1079px) {
+  #global_nav {
+    display: none;
+  }
+}
+
+// 텍스트 크기 반응형 처리
+@media (max-width: 1890px) {
+  #fullpage {
+    .common_center_text {
+      .left_section {
+        h2 {
+          font-size: 80px;
+        }
+      }
+      .right_section {
+        .view {
+          span {
+            font-size: 65px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1870px) {
+  #fullpage {
+    .intro {
+      .center_text {
+        h1 {
+          font-size: 80px;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1800px) {
   #fullpage {
     .family_site {
@@ -674,6 +822,33 @@
           }
           p {
             font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1682px) {
+  #fullpage {
+    .common_center_text {
+      .left_section {
+        h2 {
+          font-size: 70px;
+        }
+        .texts {
+          h3 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+      .right_section {
+        .view {
+          span {
+            font-size: 60px;
           }
         }
       }
@@ -692,6 +867,21 @@
           p {
             font-size: 18px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1590px) {
+  #fullpage {
+    .intro {
+      .center_text {
+        h1 {
+          font-size: 70px;
+        }
+        p {
+          font-size: 26px;
         }
       }
     }
