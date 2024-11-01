@@ -7,6 +7,7 @@
   z-index: 100;
   width: 100%;
   padding: 40px 60px;
+  min-width: 1400px;
 }
 #header nav {
   display: flex;
@@ -51,6 +52,7 @@
   flex-direction: column;
   align-items: center;
   transition: all 0.3s;
+  min-width: 421px;
 }
 #quick_menu.family_site {
   transform: translate(-50%, -116px);
@@ -232,8 +234,9 @@
   background-color: orange;
   border-radius: 50%;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #pc_pop_up .window .content .tab_time_table {
   width: 434px;
@@ -383,6 +386,7 @@
   flex-direction: column;
   align-items: center;
   gap: 36px;
+  min-width: 708px;
 }
 #fullpage .intro .center_text h1 {
   font-size: 94px;
@@ -489,6 +493,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-width: 1400px;
 }
 #fullpage .family_site footer .middle_section p {
   color: #666;
@@ -508,6 +513,7 @@
   transform: translate(-50%, -50%);
   display: flex;
   gap: 100px;
+  min-width: 700px;
 }
 #fullpage .common_center_text .left_section {
   max-width: 740px;

@@ -6,6 +6,7 @@
   z-index: 100;
   width: 100%;
   padding: 40px 60px;
+  min-width: 1400px;
 
   nav {
     display: flex;
@@ -67,6 +68,7 @@
   flex-direction: column;
   align-items: center;
   transition: all 0.3s;
+  min-width: 421px;
 
   &.family_site {
     transform: translate(-50%, -116px);
@@ -262,8 +264,9 @@
                 background-color: orange;
                 border-radius: 50%;
                 position: absolute;
-                bottom: 0;
-                right: 0;
+                bottom: 2px;
+                left: 50%;
+                transform: translateX(-50%);
               }
             }
           }
@@ -451,6 +454,7 @@
       flex-direction: column;
       align-items: center;
       gap: 36px;
+      min-width: 708px;
 
       h1 {
         font-size: 94px;
@@ -570,6 +574,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      min-width: 1400px;
 
       .middle_section {
         p {
@@ -596,6 +601,7 @@
     transform: translate(-50%, -50%);
     display: flex;
     gap: 100px;
+    min-width: 700px;
     .left_section {
       max-width: 740px;
       h2 {
