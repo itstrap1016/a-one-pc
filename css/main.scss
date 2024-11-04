@@ -507,6 +507,7 @@
     position: relative;
     background-image: url(../img/intro_bg.png);
     background-size: cover;
+    background-position: center;
     position: relative;
 
     .center_text {
@@ -538,16 +539,19 @@
     position: relative;
     background-image: url(../img/east_course.png);
     background-size: cover;
+    background-position: center;
   }
   .south_course {
     position: relative;
     background-image: url(../img/south_course.png);
     background-size: cover;
+    background-position: center;
   }
   .west_course {
     position: relative;
     background-image: url(../img/west_course.png);
     background-size: cover;
+    background-position: center;
   }
   .family_site {
     position: relative;

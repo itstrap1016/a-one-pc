@@ -430,6 +430,7 @@
   position: relative;
   background-image: url(../img/intro_bg.png);
   background-size: cover;
+  background-position: center;
   position: relative;
 }
 #fullpage .intro .center_text {
@@ -459,16 +460,19 @@
   position: relative;
   background-image: url(../img/east_course.png);
   background-size: cover;
+  background-position: center;
 }
 #fullpage .south_course {
   position: relative;
   background-image: url(../img/south_course.png);
   background-size: cover;
+  background-position: center;
 }
 #fullpage .west_course {
   position: relative;
   background-image: url(../img/west_course.png);
   background-size: cover;
+  background-position: center;
 }
 #fullpage .family_site {
   position: relative;
