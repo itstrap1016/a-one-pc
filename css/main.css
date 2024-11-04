@@ -441,7 +441,7 @@
   flex-direction: column;
   align-items: center;
   gap: 36px;
-  min-width: 708px;
+  width: 100%;
 }
 #fullpage .intro .center_text h1 {
   font-size: 94px;
@@ -567,8 +567,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
+  justify-content: center;
   gap: 100px;
-  min-width: 700px;
+  width: 100%;
 }
 #fullpage .common_center_text .left_section {
   max-width: 740px;
@@ -649,9 +650,48 @@
     content: url("/img/hamburger_black_mob.png");
   }
 }
-@media (max-width: 1079px) {
+@media (max-width: 1300px) {
   #global_nav {
     display: none;
+  }
+}
+@media (max-width: 1870px) {
+  #fullpage .intro .center_text h1 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 1590px) {
+  #fullpage .intro .center_text h1 {
+    font-size: 70px;
+  }
+  #fullpage .intro .center_text p {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1000px) {
+  #fullpage .intro .center_text {
+    gap: 20px;
+  }
+  #fullpage .intro .center_text h1 {
+    font-size: 60px;
+  }
+  #fullpage .intro .center_text p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  #fullpage .intro .center_text {
+    gap: 10px;
+  }
+  #fullpage .intro .center_text h1 {
+    font-size: 30px;
+  }
+  #fullpage .intro .center_text p {
+    font-size: 16px;
+  }
+  #fullpage .intro .center_text .line {
+    width: 2px;
+    height: 10px;
   }
 }
 @media (max-width: 1890px) {
@@ -662,20 +702,10 @@
     font-size: 65px;
   }
 }
-@media (max-width: 1870px) {
-  #fullpage .intro .center_text h1 {
-    font-size: 80px;
-  }
-}
-@media (max-width: 1800px) {
-  #fullpage .family_site .links .texts h2 {
-    font-size: 46px;
-  }
-  #fullpage .family_site .links .texts p {
-    font-size: 20px;
-  }
-}
 @media (max-width: 1682px) {
+  #fullpage .common_center_text {
+    gap: 50px;
+  }
   #fullpage .common_center_text .left_section h2 {
     font-size: 70px;
   }
@@ -689,19 +719,90 @@
     font-size: 60px;
   }
 }
+@media (max-width: 1300px) {
+  #fullpage .common_center_text {
+    flex-direction: column;
+    align-items: center;
+    width: 768px;
+    padding: 0 40px;
+  }
+  #fullpage .common_center_text .left_section h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  #fullpage .common_center_text .left_section .texts h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  #fullpage .common_center_text .left_section .texts p {
+    font-size: 16px;
+  }
+  #fullpage .common_center_text .right_section {
+    width: 100%;
+    justify-content: flex-end;
+    align-items: initial;
+  }
+  #fullpage .common_center_text .right_section .view span {
+    font-size: 40px;
+  }
+  #fullpage .common_center_text .right_section .view .arrow_right {
+    width: 100px;
+    height: 17px;
+  }
+}
+@media (max-width: 768px) {
+  #fullpage .common_center_text {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    gap: 30px;
+  }
+  #fullpage .common_center_text .left_section h2 {
+    font-size: 38px;
+    margin-bottom: 33px;
+  }
+  #fullpage .common_center_text .left_section .texts h3 {
+    font-size: 20px;
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  #fullpage .common_center_text .left_section .texts p {
+    font-size: 16px;
+  }
+  #fullpage .common_center_text .right_section {
+    width: 100%;
+    justify-content: flex-end;
+    align-items: initial;
+  }
+  #fullpage .common_center_text .right_section .view {
+    position: relative;
+    right: 12px;
+  }
+  #fullpage .common_center_text .right_section .view span {
+    font-size: 26px;
+  }
+  #fullpage .common_center_text .right_section .view .arrow_right {
+    width: 51px;
+    height: 9px;
+    right: -12px;
+    bottom: -8px;
+    background-image: url(../img/arrow_right_mob.png);
+  }
+}
+@media (max-width: 1800px) {
+  #fullpage .family_site .links .texts h2 {
+    font-size: 46px;
+  }
+  #fullpage .family_site .links .texts p {
+    font-size: 20px;
+  }
+}
 @media (max-width: 1650px) {
   #fullpage .family_site .links .texts h2 {
     font-size: 40px;
   }
   #fullpage .family_site .links .texts p {
     font-size: 18px;
-  }
-}
-@media (max-width: 1590px) {
-  #fullpage .intro .center_text h1 {
-    font-size: 70px;
-  }
-  #fullpage .intro .center_text p {
-    font-size: 26px;
   }
 }

@@ -518,7 +518,7 @@
       flex-direction: column;
       align-items: center;
       gap: 36px;
-      min-width: 708px;
+      width: 100%;
 
       h1 {
         font-size: 94px;
@@ -664,8 +664,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
+    justify-content: center;
     gap: 100px;
-    min-width: 700px;
+    width: 100%;
     .left_section {
       max-width: 740px;
       h2 {
@@ -774,13 +775,74 @@
 }
 
 // 글로벌 네비게이션 반응형 처리
-@media (max-width: 1079px) {
+@media (max-width: 1300px) {
   #global_nav {
     display: none;
   }
 }
 
-// 텍스트 크기 반응형 처리
+// 인트로 텍스트
+@media (max-width: 1870px) {
+  #fullpage {
+    .intro {
+      .center_text {
+        h1 {
+          font-size: 80px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1590px) {
+  #fullpage {
+    .intro {
+      .center_text {
+        h1 {
+          font-size: 70px;
+        }
+        p {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #fullpage {
+    .intro {
+      .center_text {
+        gap: 20px;
+        h1 {
+          font-size: 60px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #fullpage {
+    .intro {
+      .center_text {
+        gap: 10px;
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .line {
+          width: 2px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+
+// 공통 텍스트
 @media (max-width: 1890px) {
   #fullpage {
     .common_center_text {
@@ -799,39 +861,10 @@
     }
   }
 }
-
-@media (max-width: 1870px) {
-  #fullpage {
-    .intro {
-      .center_text {
-        h1 {
-          font-size: 80px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1800px) {
-  #fullpage {
-    .family_site {
-      .links {
-        .texts {
-          h2 {
-            font-size: 46px;
-          }
-          p {
-            font-size: 20px;
-          }
-        }
-      }
-    }
-  }
-}
-
 @media (max-width: 1682px) {
   #fullpage {
     .common_center_text {
+      gap: 50px;
       .left_section {
         h2 {
           font-size: 70px;
@@ -855,7 +888,108 @@
     }
   }
 }
+@media (max-width: 1300px) {
+  #fullpage {
+    .common_center_text {
+      flex-direction: column;
+      align-items: center;
+      width: 768px;
+      padding: 0 40px;
+      .left_section {
+        h2 {
+          font-size: 50px;
+          margin-bottom: 50px;
+        }
+        .texts {
+          h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+      .right_section {
+        width: 100%;
+        justify-content: flex-end;
+        align-items: initial;
+        .view {
+          span {
+            font-size: 40px;
+          }
+          .arrow_right {
+            width: 100px;
+            height: 17px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #fullpage {
+    .common_center_text {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 20px;
+      gap: 30px;
+      .left_section {
+        h2 {
+          font-size: 38px;
+          margin-bottom: 33px;
+        }
+        .texts {
+          h3 {
+            font-size: 20px;
+            margin-bottom: 18px;
+            font-weight: 500;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+      .right_section {
+        width: 100%;
+        justify-content: flex-end;
+        align-items: initial;
+        .view {
+          position: relative;
+          right: 12px;
+          span {
+            font-size: 26px;
+          }
+          .arrow_right {
+            width: 51px;
+            height: 9px;
+            right: -12px;
+            bottom: -8px;
+            background-image: url(../img/arrow_right_mob.png);
+          }
+        }
+      }
+    }
+  }
+}
 
+@media (max-width: 1800px) {
+  #fullpage {
+    .family_site {
+      .links {
+        .texts {
+          h2 {
+            font-size: 46px;
+          }
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
 @media (max-width: 1650px) {
   #fullpage {
     .family_site {
@@ -867,21 +1001,6 @@
           p {
             font-size: 18px;
           }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 1590px) {
-  #fullpage {
-    .intro {
-      .center_text {
-        h1 {
-          font-size: 70px;
-        }
-        p {
-          font-size: 26px;
         }
       }
     }
