@@ -553,14 +553,14 @@
     position: relative;
     .links {
       position: absolute;
-      top: calc(50%);
+      top: calc(50% - 20px);
       left: calc(50% - 90px);
       transform: translate(-50%, -50%);
       width: 100%;
       display: flex;
       max-width: 70vw;
       max-height: 720px;
-      min-width: 994px;
+      min-width: 960px;
 
       .left_section {
         width: 50%;
@@ -628,6 +628,9 @@
         }
       }
     }
+    .mobile_links {
+      display: none;
+    }
     footer {
       padding: 10px 60px;
       position: absolute;
@@ -638,7 +641,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-width: 1400px;
 
       .middle_section {
         p {
@@ -655,6 +657,10 @@
             color: #666;
           }
         }
+      }
+
+      .mobile_section {
+        display: none;
       }
     }
   }
@@ -732,41 +738,29 @@
 // 헤더 반응형 처리
 @media (max-width: 1000px) {
   #header {
+    padding: 20px;
     nav {
       .left_section {
         display: none;
       }
       .top_logo {
-        position: initial;
-        transform: translateX(0);
-      }
-      .hamburger_btn {
-        padding-top: 0;
-      }
-    }
-  }
-}
-@media (max-width: 768px) {
-  #header {
-    padding: 20px;
-    nav {
-      .top_logo {
         width: 100px;
         height: 38px;
-        img {
-        }
+        position: initial;
+        transform: translateX(0);
       }
       .hamburger_btn {
         img {
           content: url("/img/hamburger_mob.png");
         }
+        padding-top: 0;
       }
-    }
-    &.white_bg {
-      nav {
-        .hamburger_btn {
-          img {
-            content: url("/img/hamburger_black_mob.png");
+      &.white_bg {
+        nav {
+          .hamburger_btn {
+            img {
+              content: url("/img/hamburger_black_mob.png");
+            }
           }
         }
       }
@@ -974,6 +968,7 @@
   }
 }
 
+// 패밀리 사이트
 @media (max-width: 1800px) {
   #fullpage {
     .family_site {
@@ -1000,6 +995,227 @@
           }
           p {
             font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1300px) {
+  #fullpage {
+    .family_site {
+      .links {
+        left: 50%;
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #fullpage {
+    .family_site {
+      .links {
+        top: calc(50% - 100px);
+        padding: 0 20px;
+        min-width: auto;
+        max-height: none;
+        max-width: none;
+        .left_section {
+          width: 66.66%;
+          display: flex;
+
+          .half_img {
+            aspect-ratio: 1 /1;
+            width: 50%;
+
+            img {
+              object-fit: cover; /* cover 효과 적용 */
+              object-position: center; /* 이미지 중앙 정렬 */
+            }
+          }
+        }
+        .right_section {
+          width: 33.33%;
+
+          img {
+            object-fit: cover; /* cover 효과 적용 */
+            object-position: center; /* 이미지 중앙 정렬 */
+          }
+        }
+        .texts {
+          top: 20px;
+          left: 20px;
+          h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+      .mobile_links {
+        width: 100%;
+        display: initial;
+        position: absolute;
+        top: calc(50% - 85px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 20px;
+
+        .mobile_links_screen {
+          overflow-x: scroll;
+
+          .mobile_links_container {
+            .mobile_link {
+              width: 400px;
+
+              .thumbnail {
+                width: 400px;
+                height: 300px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  #fullpage {
+    .family_site {
+      .links {
+        top: calc(50% - 110px);
+        flex-direction: column;
+        .left_section {
+          width: 100%;
+          display: block;
+
+          .half_img {
+            aspect-ratio: 4 / 3;
+            max-height: 150px;
+            width: 100%;
+
+            img {
+              object-fit: cover; /* cover 효과 적용 */
+              object-position: center; /* 이미지 중앙 정렬 */
+            }
+          }
+        }
+        .right_section {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          max-height: 150px;
+
+          img {
+            object-fit: cover; /* cover 효과 적용 */
+            object-position: center; /* 이미지 중앙 정렬 */
+          }
+        }
+        .texts {
+          h2 {
+          }
+          p {
+          }
+        }
+      }
+      .mobile_links {
+        width: 100%;
+        display: initial;
+        position: absolute;
+        top: calc(50% - 85px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-left: 20px;
+
+        .mobile_links_screen {
+          overflow-x: scroll;
+
+          .mobile_links_container {
+            .mobile_link {
+              width: 400px;
+
+              .thumbnail {
+                width: 400px;
+                height: 300px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 푸터
+@media (max-width: 1200px) {
+  #fullpage {
+    .family_site {
+      footer {
+        .left_section {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  #quick_menu {
+    display: none;
+  }
+  #fullpage {
+    .family_site {
+      footer {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        .left_section {
+          display: initial;
+          img {
+            content: url(../img/footer_logo_mob.png);
+          }
+        }
+        .middle_section {
+          display: none;
+        }
+        .right_section {
+          height: auto;
+          margin-top: 20px;
+          margin-bottom: 12px;
+          > div {
+            a {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+        .mobile_section {
+          display: initial;
+          p {
+            color: #666;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 12px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            span {
+              font-size: 14px;
+              line-height: 20px;
+              color: #666;
+              font-weight: 500;
+            }
           }
         }
       }
