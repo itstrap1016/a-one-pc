@@ -107,7 +107,34 @@ const calendarInit = () => {
       }
     },
   });
-  const select = document.querySelector(".flatpickr-monthDropdown-months");
+  const select = document.querySelector(
+    "#pc_pop_up .flatpickr-monthDropdown-months"
+  );
+  select.disabled = true;
+};
+const mobileCaledarInit = () => {
+  flatpickr("#mobile_datepicker", {
+    inline: true,
+    locale: "ko",
+    defaultDate: new Date(),
+    onDayCreate: function (dObj, dStr, fp, dayElem) {
+      const date = dayElem.dateObj; // 날짜 객체
+
+      // 특정 날짜 목록
+      const specialDates = [
+        1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 18, 21, 23, 24, 26, 27, 28,
+        29, 30,
+      ];
+
+      // 11월의 특정 날짜에 클래스 추가
+      if (date.getMonth() === 10 && specialDates.includes(date.getDate())) {
+        dayElem.classList.add("highlighted"); // 클래스 추가
+      }
+    },
+  });
+  const select = document.querySelector(
+    "#mobile_pop_up .flatpickr-monthDropdown-months"
+  );
   select.disabled = true;
 };
 const popupInit = () => {
@@ -209,6 +236,7 @@ const initialInit = () => {
   popupInit();
   popupTabInit();
   removeWaterMark();
+  mobileCaledarInit();
 };
 
 initialInit();

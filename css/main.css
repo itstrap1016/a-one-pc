@@ -323,6 +323,7 @@
   z-index: 250;
   width: 420px;
   display: none;
+  border: 1px solid orange;
 }
 #pc_pop_up .reserv_info_check.active_now {
   display: block;
@@ -337,7 +338,7 @@
 #pc_pop_up .reserv_info_check .content .txts .txt {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 #pc_pop_up .reserv_info_check .content .txts .txt p {
   font-size: 18px;
@@ -354,7 +355,7 @@
   color: #666;
 }
 #pc_pop_up .reserv_info_check .content .btns {
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -414,6 +415,160 @@
   color: #2fb400;
 }
 
+#mobile_pop_up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  background-color: #fff;
+  display: none;
+}
+#mobile_pop_up.clicked {
+  display: block;
+}
+#mobile_pop_up .header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#mobile_pop_up .header .logo {
+  width: 100px;
+  height: 38px;
+}
+#mobile_pop_up .header .logo img {
+  width: 100%;
+  height: 100%;
+}
+#mobile_pop_up #mobile_datepicker {
+  display: none;
+}
+#mobile_pop_up .flatpickr-calendar {
+  color: #222;
+  box-shadow: none;
+  margin: 0 auto;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-months {
+  margin-bottom: 10px;
+  align-items: center;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-months .flatpickr-current-month {
+  padding-top: 4px;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months {
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months:disabled {
+  color: #222;
+  pointer-events: none;
+  opacity: 1;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-months .flatpickr-current-month .numInputWrapper {
+  width: 70px;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-months .flatpickr-current-month .cur-year {
+  font-size: 20px;
+  font-weight: 500;
+  color: #222;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-weekdays {
+  margin-bottom: 0;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-weekday {
+  color: #222;
+  font-weight: 500;
+  font-size: 16px;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-day {
+  font-size: 16px;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-day.selected {
+  font-weight: 500;
+  background-color: #2fb400;
+  border-color: #2fb400;
+}
+#mobile_pop_up .tab_table {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+#mobile_pop_up .tab_table .tab {
+  background-color: #d7f1ce;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 18px;
+  margin-bottom: 20px;
+}
+#mobile_pop_up .tab_table .tab button {
+  color: #666;
+  width: 33.33%;
+  height: 36px;
+}
+#mobile_pop_up .tab_table .tab button.active_now {
+  background-color: #2fb400;
+  border-radius: 18px;
+  color: #fff;
+}
+#mobile_pop_up .tab_table .time_table {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+#mobile_pop_up .tab_table .time_table::-webkit-scrollbar {
+  width: 4px; /* 스크롤바 너비 */
+}
+#mobile_pop_up .tab_table .time_table::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb; /* 스크롤바 색상 */
+  border-radius: 4px; /* 스크롤바 모서리 둥글게 */
+}
+#mobile_pop_up .tab_table .time_table::-webkit-scrollbar-track {
+  background: #ededed; /* 스크롤바 트랙 색상 */
+}
+#mobile_pop_up .tab_table .time_table table {
+  width: 100%;
+}
+#mobile_pop_up .tab_table .time_table table thead {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+#mobile_pop_up .tab_table .time_table table thead tr {
+  border-bottom: 1px solid #ddd;
+}
+#mobile_pop_up .tab_table .time_table table thead tr th {
+  color: #222;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+#mobile_pop_up .tab_table .time_table table tbody tr:first-child td {
+  padding-top: 10px;
+}
+#mobile_pop_up .tab_table .time_table table tbody tr td {
+  padding: 5px 0;
+  text-align: center;
+  color: #666;
+}
+#mobile_pop_up .tab_table .time_table table tbody tr td select {
+  color: #666;
+  border: none;
+}
+#mobile_pop_up .tab_table .time_table table tbody tr td select option {
+  color: #666;
+}
+#mobile_pop_up .tab_table .time_table table tbody tr td button {
+  font-weight: 500;
+  color: #2fb400;
+}
+#mobile_pop_up .tab_table .time_table table tbody tr td button:disabled {
+  color: #666;
+  cursor: initial;
+}
+
 #global_nav {
   position: fixed;
   top: 50%;
@@ -470,6 +625,28 @@
   width: 40px;
   height: 2px;
   background-color: #006736;
+}
+
+#mobile_float_btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+}
+#mobile_float_btn .txt {
+  font-size: 14px;
+  color: #222;
+  font-weight: 500;
 }
 
 #fullpage .intro {
@@ -589,7 +766,42 @@
   line-height: 1.5;
 }
 #fullpage .family_site .mobile_links {
+  width: 100%;
   display: none;
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 20px;
+}
+#fullpage .family_site .mobile_links .mobile_links_screen {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+#fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container {
+  display: flex;
+  gap: 40px;
+  padding-bottom: 20px;
+}
+#fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .thumbnail {
+  width: 400px;
+  aspect-ratio: 4/3;
+}
+#fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+#fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .txt {
+  margin-top: 20px;
+}
+#fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .txt h2 {
+  color: #222;
+  font-size: 20px;
+  font-weight: 500;
+}
+#fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .txt p {
+  color: #666;
+  margin-top: 10px;
 }
 #fullpage .family_site footer {
   padding: 10px 60px;
@@ -864,6 +1076,7 @@
 }
 @media (max-width: 1000px) {
   #fullpage .family_site .links {
+    display: none;
     top: calc(50% - 100px);
     padding: 0 20px;
     min-width: auto;
@@ -905,27 +1118,7 @@
     font-size: 16px;
   }
   #fullpage .family_site .mobile_links {
-    width: 100%;
-    display: initial;
-    position: absolute;
-    top: calc(50% - 85px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-left: 20px;
-  }
-  #fullpage .family_site .mobile_links .mobile_links_screen {
-    overflow-x: scroll;
-  }
-  #fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link {
-    width: 400px;
-  }
-  #fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .thumbnail {
-    width: 400px;
-    height: 300px;
-  }
-  #fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .thumbnail img {
-    width: 100%;
-    height: 100%;
+    display: block;
   }
 }
 @media (max-width: 768px) {
@@ -959,28 +1152,15 @@
     -o-object-position: center;
        object-position: center; /* 이미지 중앙 정렬 */
   }
-  #fullpage .family_site .mobile_links {
-    width: 100%;
-    display: initial;
-    position: absolute;
-    top: calc(50% - 85px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-left: 20px;
-  }
-  #fullpage .family_site .mobile_links .mobile_links_screen {
-    overflow-x: scroll;
-  }
-  #fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link {
-    width: 400px;
-  }
   #fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .thumbnail {
-    width: 400px;
-    height: 300px;
+    width: 300px;
+    aspect-ratio: 4/3;
   }
-  #fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .thumbnail img {
-    width: 100%;
-    height: 100%;
+}
+@media (max-width: 400px) {
+  #fullpage .family_site .mobile_links .mobile_links_screen .mobile_links_container .mobile_link .thumbnail {
+    width: 250px;
+    aspect-ratio: 4/3;
   }
 }
 @media (max-width: 1200px) {
@@ -1032,5 +1212,10 @@
     line-height: 20px;
     color: #666;
     font-weight: 500;
+  }
+}
+@media (max-width: 1000px) {
+  #mobile_float_btn {
+    display: flex;
   }
 }
