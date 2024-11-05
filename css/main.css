@@ -158,34 +158,38 @@
   font-size: 24px;
   font-weight: 500;
 }
-#pc_pop_up .window {
+#pc_pop_up .pop_up_content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
   width: 840px;
+  display: none;
 }
-#pc_pop_up .window .content {
+#pc_pop_up .pop_up_content.active_now {
+  display: block;
+}
+#pc_pop_up .pop_up_content .content {
   padding: 20px 24px;
   display: flex;
   justify-content: space-between;
 }
-#pc_pop_up .window .content .calendar #datepicker {
+#pc_pop_up .pop_up_content .content .calendar #datepicker {
   display: none;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar {
   color: #222;
   box-shadow: none;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-months {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-months {
   margin-bottom: 20px;
   align-items: center;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month {
   padding-top: 4px;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months {
   font-size: 20px;
   font-weight: 500;
   color: #222;
@@ -193,39 +197,39 @@
      -moz-appearance: none;
           appearance: none;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months:disabled {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month .flatpickr-monthDropdown-months:disabled {
   color: #222;
   pointer-events: none;
   opacity: 1;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month .numInputWrapper {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month .numInputWrapper {
   width: 70px;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month .cur-year {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-months .flatpickr-current-month .cur-year {
   font-size: 20px;
   font-weight: 500;
   color: #222;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-weekdays {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-weekdays {
   margin-bottom: 10px;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-weekday {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-weekday {
   color: #222;
   font-weight: 500;
   font-size: 16px;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-day {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-day {
   font-size: 16px;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-day.selected {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-day.selected {
   font-weight: 500;
   background-color: #2fb400;
   border-color: #2fb400;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-day.highlighted {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-day.highlighted {
   position: relative;
 }
-#pc_pop_up .window .content .calendar .flatpickr-calendar .flatpickr-day.highlighted::after {
+#pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-day.highlighted::after {
   content: "";
   display: inline-block;
   width: 4px;
@@ -237,77 +241,77 @@
   left: 50%;
   transform: translateX(-50%);
 }
-#pc_pop_up .window .content .tab_time_table {
+#pc_pop_up .pop_up_content .content .tab_time_table {
   width: 434px;
 }
-#pc_pop_up .window .content .tab_time_table .tab {
+#pc_pop_up .pop_up_content .content .tab_time_table .tab {
   display: flex;
   background-color: #d7f1ce;
   border-radius: 20px;
   margin-bottom: 20px;
 }
-#pc_pop_up .window .content .tab_time_table .tab li button {
+#pc_pop_up .pop_up_content .content .tab_time_table .tab li button {
   font-size: 18px;
   padding: 10px 18px;
   border-radius: 20px;
   color: #999999;
 }
-#pc_pop_up .window .content .tab_time_table .tab li button.active_now {
+#pc_pop_up .pop_up_content .content .tab_time_table .tab li button.active_now {
   background-color: #2fb400;
   color: #fff;
   font-weight: 500;
 }
-#pc_pop_up .window .content .tab_time_table .time_table {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table {
   max-height: 270px;
   overflow-y: scroll;
 }
-#pc_pop_up .window .content .tab_time_table .time_table::-webkit-scrollbar {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table::-webkit-scrollbar {
   width: 4px; /* 스크롤바 너비 */
 }
-#pc_pop_up .window .content .tab_time_table .time_table::-webkit-scrollbar-thumb {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table::-webkit-scrollbar-thumb {
   background-color: #dbdbdb; /* 스크롤바 색상 */
   border-radius: 4px; /* 스크롤바 모서리 둥글게 */
 }
-#pc_pop_up .window .content .tab_time_table .time_table::-webkit-scrollbar-track {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table::-webkit-scrollbar-track {
   background: #ededed; /* 스크롤바 트랙 색상 */
 }
-#pc_pop_up .window .content .tab_time_table .time_table table {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table {
   width: 100%;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table thead {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table thead {
   position: sticky;
   top: 0;
   background-color: white;
   border-bottom: 1px solid #ddd;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table thead tr {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table thead tr {
   border-bottom: 1px solid #ddd;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table thead tr th {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table thead tr th {
   color: #222;
   font-weight: 500;
   padding-bottom: 15px;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table tbody tr:first-child td {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table tbody tr:first-child td {
   padding-top: 10px;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table tbody tr td {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table tbody tr td {
   padding: 5px 0;
   text-align: center;
   color: #666;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table tbody tr td select {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table tbody tr td select {
   color: #666;
   border: none;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table tbody tr td select option {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table tbody tr td select option {
   color: #666;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table tbody tr td button {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table tbody tr td button {
   font-weight: 500;
   color: #2fb400;
 }
-#pc_pop_up .window .content .tab_time_table .time_table table tbody tr td button:disabled {
+#pc_pop_up .pop_up_content .content .tab_time_table .time_table table tbody tr td button:disabled {
   color: #666;
   cursor: initial;
 }
@@ -366,6 +370,48 @@
 #pc_pop_up .reserv_info_check .content .btns button.cancel_btn {
   font-size: 18px;
   color: #222;
+}
+#pc_pop_up .reserv_complete {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 840px;
+  display: none;
+}
+#pc_pop_up .reserv_complete.active_now {
+  display: block;
+}
+#pc_pop_up .reserv_complete .txts {
+  padding: 20px 24px;
+}
+#pc_pop_up .reserv_complete .txts .heading {
+  font-size: 22px;
+  color: #222;
+  font-weight: 500;
+  text-align: center;
+}
+#pc_pop_up .reserv_complete .txts .txt {
+  margin-top: 20px;
+  color: #666;
+  text-align: center;
+  line-height: 1.5;
+}
+#pc_pop_up .reserv_complete .txts .txt span {
+  color: #222;
+  font-weight: 500;
+  line-height: 1.5;
+}
+#pc_pop_up .reserv_complete .btn_container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+#pc_pop_up .reserv_complete .btn_container button {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2fb400;
 }
 
 #global_nav {

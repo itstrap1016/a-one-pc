@@ -111,14 +111,35 @@ const calendarInit = () => {
   select.disabled = true;
 };
 const popupInit = () => {
-  const reservBtn = document.querySelector("#quick_menu .menu .reserv button");
+  const popupBtn = document.querySelector("#quick_menu .menu .reserv button");
   const popupBg = document.querySelector("#pc_pop_up .bg");
   const closeBtn = document.querySelector(
-    "#pc_pop_up .window > .header > button"
+    "#pc_pop_up .pop_up_content > .header > button"
   );
   const popup = document.querySelector("#pc_pop_up");
+  const popupContent = document.querySelector("#pc_pop_up .pop_up_content");
+  const reservBtns = document.querySelectorAll(
+    "#pc_pop_up .pop_up_content .content .tab_time_table .time_table table tbody tr td button"
+  );
+  const reservInfoCheck = document.querySelector(".reserv_info_check");
+  const reservInfoCheckClose = document.querySelector(
+    ".reserv_info_check .header button"
+  );
+  const reservInfoCheckCancel = document.querySelector(
+    "#pc_pop_up .reserv_info_check .content .btns button.cancel_btn"
+  );
+  const reservInfoCheckBtn = document.querySelector(
+    "#pc_pop_up .reserv_info_check .content .btns button.reserv_btn"
+  );
+  const reservComplete = document.querySelector("#pc_pop_up .reserv_complete");
+  const reservCompleteClose = document.querySelector(
+    "#pc_pop_up .reserv_complete .header button"
+  );
+  const reservCompleteCheck = document.querySelector(
+    "#pc_pop_up .reserv_complete .btn_container button"
+  );
 
-  reservBtn.addEventListener("click", () => {
+  popupBtn.addEventListener("click", () => {
     popup.classList.add("active_now");
     myFullpage.setAllowScrolling(false);
   });
@@ -130,17 +151,45 @@ const popupInit = () => {
     popup.classList.remove("active_now");
     myFullpage.setAllowScrolling(true);
   });
+  reservBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!reservInfoCheck.classList.contains("active_now")) {
+        reservInfoCheck.classList.add("active_now");
+      }
+    });
+  });
+  reservInfoCheckClose.addEventListener("click", () => {
+    reservInfoCheck.classList.remove("active_now");
+  });
+  reservInfoCheckCancel.addEventListener("click", () => {
+    reservInfoCheck.classList.remove("active_now");
+  });
+  reservInfoCheckBtn.addEventListener("click", () => {
+    reservInfoCheck.classList.remove("active_now");
+    popupContent.classList.remove("active_now");
+    reservComplete.classList.add("active_now");
+  });
+  reservCompleteClose.addEventListener("click", () => {
+    reservComplete.classList.remove("active_now");
+    popup.classList.remove("active_now");
+    popupContent.classList.add("active_now");
+  });
+  reservCompleteCheck.addEventListener("click", () => {
+    reservComplete.classList.remove("active_now");
+    popup.classList.remove("active_now");
+    popupContent.classList.add("active_now");
+  });
 };
 const popupTabInit = () => {
   const btns = document.querySelectorAll(
-    "#pc_pop_up .window .content .tab_time_table .tab li button"
+    "#pc_pop_up .pop_up_content .content .tab_time_table .tab li button"
   );
 
   btns.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (!btn.classList.contains("active_now")) {
         const activeBtn = document.querySelector(
-          "#pc_pop_up .window .content .tab_time_table .tab li button.active_now"
+          "#pc_pop_up .pop_up_content .content .tab_time_table .tab li button.active_now"
         );
         activeBtn.classList.remove("active_now");
         btn.classList.add("active_now");
