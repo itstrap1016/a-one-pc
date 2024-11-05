@@ -224,6 +224,37 @@ const popupTabInit = () => {
     });
   });
 };
+const mobilePopupInit = () => {
+  const btn = document.querySelector("#mobile_float_btn");
+  const popup = document.querySelector("#mobile_pop_up");
+  const closeBtn = document.querySelector("#mobile_pop_up .close_btn");
+
+  btn.addEventListener("click", () => {
+    popup.classList.add("clicked");
+    myFullpage.setAllowScrolling(false);
+  });
+  closeBtn.addEventListener("click", () => {
+    popup.classList.remove("clicked");
+    myFullpage.setAllowScrolling(true);
+  });
+};
+const mobilePopupTabInit = () => {
+  const btns = document.querySelectorAll(
+    "#mobile_pop_up .tab_table .tab button"
+  );
+
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!btn.classList.contains("active_now")) {
+        const activeBtn = document.querySelector(
+          "#mobile_pop_up .tab_table .tab button.active_now"
+        );
+        activeBtn.classList.remove("active_now");
+        btn.classList.add("active_now");
+      }
+    });
+  });
+};
 const removeWaterMark = () => {
   const waterMark = document.querySelector(".fp-watermark");
   waterMark.remove();
@@ -237,6 +268,8 @@ const initialInit = () => {
   popupTabInit();
   removeWaterMark();
   mobileCaledarInit();
+  mobilePopupInit();
+  mobilePopupTabInit();
 };
 
 initialInit();
