@@ -140,8 +140,12 @@ const calendarInit = () => {
 const popupInit = () => {
   const popupBtn = document.querySelector("#quick_menu .menu .reserv button");
   const popupBg = document.querySelector("#pc_pop_up .bg");
+  const mobilePopupBg = document.querySelector("#pc_pop_up .mobile_bg");
   const closeBtn = document.querySelector(
     "#pc_pop_up .pop_up_content > .header > button"
+  );
+  const mobileCloseBtn = document.querySelector(
+    "#pc_pop_up .mobile_header button"
   );
   const popup = document.querySelector("#pc_pop_up");
   const popupContent = document.querySelector("#pc_pop_up .pop_up_content");
@@ -165,6 +169,8 @@ const popupInit = () => {
   const reservCompleteCheck = document.querySelector(
     "#pc_pop_up .reserv_complete .btn_container button"
   );
+  const mobileFloatBtn = document.querySelector("#mobile_float_btn");
+  const mobileBg = document.querySelector("#pc_pop_up .mobile_bg");
 
   popupBtn.addEventListener("click", () => {
     popup.classList.add("active_now");
@@ -187,14 +193,24 @@ const popupInit = () => {
     btn.addEventListener("click", () => {
       if (!reservInfoCheck.classList.contains("active_now")) {
         reservInfoCheck.classList.add("active_now");
+
+        if (window.innerWidth <= 1000) {
+          mobileBg.classList.add("active_now");
+        }
       }
     });
   });
   reservInfoCheckClose.addEventListener("click", () => {
     reservInfoCheck.classList.remove("active_now");
+    if (window.innerWidth <= 1000) {
+      mobileBg.classList.remove("active_now");
+    }
   });
   reservInfoCheckCancel.addEventListener("click", () => {
     reservInfoCheck.classList.remove("active_now");
+    if (window.innerWidth <= 1000) {
+      mobileBg.classList.remove("active_now");
+    }
   });
   reservInfoCheckBtn.addEventListener("click", () => {
     reservInfoCheck.classList.remove("active_now");
@@ -205,11 +221,52 @@ const popupInit = () => {
     reservComplete.classList.remove("active_now");
     popup.classList.remove("active_now");
     popupContent.classList.add("active_now");
+    if (window.innerWidth <= 1000) {
+      mobileBg.classList.remove("active_now");
+    }
   });
   reservCompleteCheck.addEventListener("click", () => {
     reservComplete.classList.remove("active_now");
     popup.classList.remove("active_now");
     popupContent.classList.add("active_now");
+    if (window.innerWidth <= 1000) {
+      mobileBg.classList.remove("active_now");
+    }
+  });
+  mobileFloatBtn.addEventListener("click", () => {
+    popup.classList.add("active_now");
+    myFullpage.setAllowScrolling(false);
+  });
+  mobileCloseBtn.addEventListener("click", () => {
+    popup.classList.remove("active_now");
+    myFullpage.setAllowScrolling(true);
+  });
+  mobilePopupBg.addEventListener("click", () => {
+    mobilePopupBg.classList.remove("active_now");
+    if (reservInfoCheck.classList.contains("active_now")) {
+      reservInfoCheck.classList.remove("active_now");
+    }
+    if (reservComplete.classList.remove("active_now")) {
+      reservComplete.classList.remove("active_now");
+      popup.classList.remove("active_now");
+    }
+    if (!popupContent.classList.contains("active_now")) {
+      popupContent.classList.add("active_now");
+    }
+    myFullpage.setAllowScrolling(true);
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 1000) {
+      if (
+        reservInfoCheck.classList.contains("active_now") ||
+        reservComplete.classList.contains("active_now")
+      ) {
+        mobileBg.classList.add("active_now");
+      }
+    }
+    if (window.innerWidth > 1000) {
+      mobileBg.classList.remove("active_now");
+    }
   });
 };
 const popupTabInit = () => {

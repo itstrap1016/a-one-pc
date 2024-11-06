@@ -406,6 +406,7 @@
   background-color: white;
   width: 840px;
   display: none;
+  z-index: 250;
 }
 #pc_pop_up .reserv_complete.active_now {
   display: block;
