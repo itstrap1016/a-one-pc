@@ -112,31 +112,31 @@ const calendarInit = () => {
   );
   select.disabled = true;
 };
-const mobileCaledarInit = () => {
-  flatpickr("#mobile_datepicker", {
-    inline: true,
-    locale: "ko",
-    defaultDate: new Date(),
-    onDayCreate: function (dObj, dStr, fp, dayElem) {
-      const date = dayElem.dateObj; // 날짜 객체
+// const mobileCaledarInit = () => {
+//   flatpickr("#mobile_datepicker", {
+//     inline: true,
+//     locale: "ko",
+//     defaultDate: new Date(),
+//     onDayCreate: function (dObj, dStr, fp, dayElem) {
+//       const date = dayElem.dateObj; // 날짜 객체
 
-      // 특정 날짜 목록
-      const specialDates = [
-        1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 18, 21, 23, 24, 26, 27, 28,
-        29, 30,
-      ];
+//       // 특정 날짜 목록
+//       const specialDates = [
+//         1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 18, 21, 23, 24, 26, 27, 28,
+//         29, 30,
+//       ];
 
-      // 11월의 특정 날짜에 클래스 추가
-      if (date.getMonth() === 10 && specialDates.includes(date.getDate())) {
-        dayElem.classList.add("highlighted"); // 클래스 추가
-      }
-    },
-  });
-  const select = document.querySelector(
-    "#mobile_pop_up .flatpickr-monthDropdown-months"
-  );
-  select.disabled = true;
-};
+//       // 11월의 특정 날짜에 클래스 추가
+//       if (date.getMonth() === 10 && specialDates.includes(date.getDate())) {
+//         dayElem.classList.add("highlighted"); // 클래스 추가
+//       }
+//     },
+//   });
+//   const select = document.querySelector(
+//     "#mobile_pop_up .flatpickr-monthDropdown-months"
+//   );
+//   select.disabled = true;
+// };
 const popupInit = () => {
   const popupBtn = document.querySelector("#quick_menu .menu .reserv button");
   const popupBg = document.querySelector("#pc_pop_up .bg");
@@ -229,94 +229,94 @@ const popupTabInit = () => {
     });
   });
 };
-const mobilePopupInit = () => {
-  const btn = document.querySelector("#mobile_float_btn");
-  const popup = document.querySelector("#mobile_pop_up");
-  const closeBtn = document.querySelector("#mobile_pop_up .close_btn");
-  const reservBtns = document.querySelectorAll(
-    "#mobile_pop_up .tab_table .time_table table tbody tr td button"
-  );
-  const mobileReservInfoCheck = document.querySelector(
-    "#mobile_reserv_info_check"
-  );
-  const mobileReservInfoCheckBg = document.querySelector(
-    "#mobile_reserv_info_check .bg"
-  );
-  const mobileReservInfoCheckClose = document.querySelector(
-    "#mobile_reserv_info_check .header button"
-  );
-  const mobileReservInfoCheckBtn = document.querySelector(
-    "#mobile_reserv_info_check .btns_container .reserv_btn"
-  );
-  const mobileReservInfoCheckCancel = document.querySelector(
-    "#mobile_reserv_info_check .btns_container .cancel_btn"
-  );
-  const mobileComplete = document.querySelector("#mobile_reserv_complete");
-  const mobileCompleteBg = document.querySelector(
-    "#mobile_reserv_complete .bg"
-  );
-  const mobileCompleteClose = document.querySelector(
-    "#mobile_reserv_complete .header button"
-  );
-  const mobileCompleteCheckBtn = document.querySelector(
-    "#mobile_reserv_complete .btns_container .reserv_check"
-  );
+// const mobilePopupInit = () => {
+//   const btn = document.querySelector("#mobile_float_btn");
+//   const popup = document.querySelector("#mobile_pop_up");
+//   const closeBtn = document.querySelector("#mobile_pop_up .close_btn");
+//   const reservBtns = document.querySelectorAll(
+//     "#mobile_pop_up .tab_table .time_table table tbody tr td button"
+//   );
+//   const mobileReservInfoCheck = document.querySelector(
+//     "#mobile_reserv_info_check"
+//   );
+//   const mobileReservInfoCheckBg = document.querySelector(
+//     "#mobile_reserv_info_check .bg"
+//   );
+//   const mobileReservInfoCheckClose = document.querySelector(
+//     "#mobile_reserv_info_check .header button"
+//   );
+//   const mobileReservInfoCheckBtn = document.querySelector(
+//     "#mobile_reserv_info_check .btns_container .reserv_btn"
+//   );
+//   const mobileReservInfoCheckCancel = document.querySelector(
+//     "#mobile_reserv_info_check .btns_container .cancel_btn"
+//   );
+//   const mobileComplete = document.querySelector("#mobile_reserv_complete");
+//   const mobileCompleteBg = document.querySelector(
+//     "#mobile_reserv_complete .bg"
+//   );
+//   const mobileCompleteClose = document.querySelector(
+//     "#mobile_reserv_complete .header button"
+//   );
+//   const mobileCompleteCheckBtn = document.querySelector(
+//     "#mobile_reserv_complete .btns_container .reserv_check"
+//   );
 
-  btn.addEventListener("click", () => {
-    popup.classList.add("active_now");
-    myFullpage.setAllowScrolling(false);
-  });
-  closeBtn.addEventListener("click", () => {
-    popup.classList.remove("active_now");
-    myFullpage.setAllowScrolling(true);
-  });
-  reservBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (!mobileReservInfoCheck.classList.contains("active_now")) {
-        mobileReservInfoCheck.classList.add("active_now");
-      }
-    });
-  });
-  mobileReservInfoCheckBg.addEventListener("click", () => {
-    mobileReservInfoCheck.classList.remove("active_now");
-  });
-  mobileReservInfoCheckClose.addEventListener("click", () => {
-    mobileReservInfoCheck.classList.remove("active_now");
-  });
-  mobileReservInfoCheckCancel.addEventListener("click", () => {
-    mobileReservInfoCheck.classList.remove("active_now");
-  });
-  mobileReservInfoCheckBtn.addEventListener("click", () => {
-    mobileReservInfoCheck.classList.remove("active_now");
-    mobileComplete.classList.add("active_now");
-  });
-  mobileCompleteBg.addEventListener("click", () => {
-    mobileComplete.classList.remove("active_now");
-  });
-  mobileCompleteClose.addEventListener("click", () => {
-    mobileComplete.classList.remove("active_now");
-  });
-  mobileCompleteCheckBtn.addEventListener("click", () => {
-    mobileComplete.classList.remove("active_now");
-  });
-};
-const mobilePopupTabInit = () => {
-  const btns = document.querySelectorAll(
-    "#mobile_pop_up .tab_table .tab button"
-  );
+//   btn.addEventListener("click", () => {
+//     popup.classList.add("active_now");
+//     myFullpage.setAllowScrolling(false);
+//   });
+//   closeBtn.addEventListener("click", () => {
+//     popup.classList.remove("active_now");
+//     myFullpage.setAllowScrolling(true);
+//   });
+//   reservBtns.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       if (!mobileReservInfoCheck.classList.contains("active_now")) {
+//         mobileReservInfoCheck.classList.add("active_now");
+//       }
+//     });
+//   });
+//   mobileReservInfoCheckBg.addEventListener("click", () => {
+//     mobileReservInfoCheck.classList.remove("active_now");
+//   });
+//   mobileReservInfoCheckClose.addEventListener("click", () => {
+//     mobileReservInfoCheck.classList.remove("active_now");
+//   });
+//   mobileReservInfoCheckCancel.addEventListener("click", () => {
+//     mobileReservInfoCheck.classList.remove("active_now");
+//   });
+//   mobileReservInfoCheckBtn.addEventListener("click", () => {
+//     mobileReservInfoCheck.classList.remove("active_now");
+//     mobileComplete.classList.add("active_now");
+//   });
+//   mobileCompleteBg.addEventListener("click", () => {
+//     mobileComplete.classList.remove("active_now");
+//   });
+//   mobileCompleteClose.addEventListener("click", () => {
+//     mobileComplete.classList.remove("active_now");
+//   });
+//   mobileCompleteCheckBtn.addEventListener("click", () => {
+//     mobileComplete.classList.remove("active_now");
+//   });
+// };
+// const mobilePopupTabInit = () => {
+//   const btns = document.querySelectorAll(
+//     "#mobile_pop_up .tab_table .tab button"
+//   );
 
-  btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      if (!btn.classList.contains("active_now")) {
-        const activeBtn = document.querySelector(
-          "#mobile_pop_up .tab_table .tab button.active_now"
-        );
-        activeBtn.classList.remove("active_now");
-        btn.classList.add("active_now");
-      }
-    });
-  });
-};
+//   btns.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       if (!btn.classList.contains("active_now")) {
+//         const activeBtn = document.querySelector(
+//           "#mobile_pop_up .tab_table .tab button.active_now"
+//         );
+//         activeBtn.classList.remove("active_now");
+//         btn.classList.add("active_now");
+//       }
+//     });
+//   });
+// };
 const removeWaterMark = () => {
   const waterMark = document.querySelector(".fp-watermark");
   waterMark.remove();
@@ -329,9 +329,6 @@ const initialInit = () => {
   popupInit();
   popupTabInit();
   removeWaterMark();
-  mobileCaledarInit();
-  mobilePopupInit();
-  mobilePopupTabInit();
 };
 
 initialInit();
