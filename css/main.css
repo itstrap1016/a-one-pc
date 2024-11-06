@@ -425,7 +425,7 @@
   background-color: #fff;
   display: none;
 }
-#mobile_pop_up.clicked {
+#mobile_pop_up.active_now {
   display: block;
 }
 #mobile_pop_up .header {
@@ -492,6 +492,21 @@
   font-weight: 500;
   background-color: #2fb400;
   border-color: #2fb400;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-day.highlighted {
+  position: relative;
+}
+#mobile_pop_up .flatpickr-calendar .flatpickr-day.highlighted::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: orange;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #mobile_pop_up .tab_table {
   margin-top: 20px;
@@ -568,6 +583,164 @@
 #mobile_pop_up .tab_table .time_table table tbody tr td button:disabled {
   color: #666;
   cursor: initial;
+}
+
+#mobile_reserv_info_check {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+#mobile_reserv_info_check.active_now {
+  display: block;
+}
+#mobile_reserv_info_check .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+#mobile_reserv_info_check .pop_up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 40px);
+}
+#mobile_reserv_info_check .pop_up .header {
+  background-color: #009850;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+#mobile_reserv_info_check .pop_up .header p {
+  font-size: 18px;
+  font-weight: 500;
+}
+#mobile_reserv_info_check .pop_up .header button {
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/mobile_pop_up_close_02.png);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+#mobile_reserv_info_check .pop_up .content {
+  background-color: white;
+  padding: 20px 10px;
+}
+#mobile_reserv_info_check .pop_up .content .info li {
+  display: flex;
+  margin-bottom: 20px;
+}
+#mobile_reserv_info_check .pop_up .content .info li:last-child {
+  margin-bottom: 0;
+}
+#mobile_reserv_info_check .pop_up .content .info li p:first-child {
+  color: #222;
+  font-weight: 500;
+  width: 100px;
+}
+#mobile_reserv_info_check .pop_up .content .info li p:nth-child(2) {
+  color: #666;
+}
+#mobile_reserv_info_check .pop_up .content .info li p:nth-child(2).highlighted {
+  font-weight: 500;
+}
+#mobile_reserv_info_check .pop_up .content .btns_container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+#mobile_reserv_info_check .pop_up .content .btns_container .reserv_btn {
+  color: #2fb400;
+  font-weight: 500;
+}
+#mobile_reserv_info_check .pop_up .content .btns_container .cancel_btn {
+  color: #222;
+}
+
+#mobile_reserv_complete {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+#mobile_reserv_complete.active_now {
+  display: block;
+}
+#mobile_reserv_complete .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+#mobile_reserv_complete .pop_up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 40px);
+}
+#mobile_reserv_complete .pop_up .header {
+  background-color: #009850;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+#mobile_reserv_complete .pop_up .header p {
+  font-size: 18px;
+  font-weight: 500;
+}
+#mobile_reserv_complete .pop_up .header button {
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/mobile_pop_up_close_02.png);
+  background-position: center center;
+  background-size: 100% 100%;
+}
+#mobile_reserv_complete .pop_up .content {
+  background-color: white;
+  padding: 20px 10px;
+}
+#mobile_reserv_complete .pop_up .content .txts {
+  text-align: center;
+}
+#mobile_reserv_complete .pop_up .content .txts .heading {
+  font-size: 20px;
+  color: #222;
+  font-weight: 500;
+}
+#mobile_reserv_complete .pop_up .content .txts .txt {
+  color: #666;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+#mobile_reserv_complete .pop_up .content .txts .txt > span {
+  color: #666;
+  font-weight: 500;
+}
+#mobile_reserv_complete .pop_up .content .btns_container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+#mobile_reserv_complete .pop_up .content .btns_container .reserv_check {
+  color: #2fb400;
+  font-weight: 500;
 }
 
 #global_nav {
