@@ -224,6 +224,7 @@ const popupInit = () => {
     if (window.innerWidth <= 1000) {
       mobileBg.classList.remove("active_now");
     }
+    myFullpage.setAllowScrolling(true);
   });
   reservCompleteCheck.addEventListener("click", () => {
     reservComplete.classList.remove("active_now");
@@ -232,6 +233,7 @@ const popupInit = () => {
     if (window.innerWidth <= 1000) {
       mobileBg.classList.remove("active_now");
     }
+    myFullpage.setAllowScrolling(true);
   });
   mobileFloatBtn.addEventListener("click", () => {
     popup.classList.add("active_now");
