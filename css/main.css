@@ -1495,9 +1495,16 @@
     display: none;
   }
   #pc_pop_up .pop_up_content .content {
+    padding-top: 0;
     flex-direction: column;
     align-items: center;
     gap: 30px;
+  }
+  #pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-months {
+    margin-bottom: 15px;
+  }
+  #pc_pop_up .pop_up_content .content .calendar .flatpickr-calendar .flatpickr-weekdays {
+    margin-bottom: 5px;
   }
   #pc_pop_up .pop_up_content .content .tab_time_table {
     width: 100%;
