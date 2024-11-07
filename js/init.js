@@ -248,11 +248,9 @@ const popupInit = () => {
     if (reservInfoCheck.classList.contains("active_now")) {
       reservInfoCheck.classList.remove("active_now");
     }
-    if (reservComplete.classList.remove("active_now")) {
+    if (reservComplete.classList.contains("active_now")) {
       reservComplete.classList.remove("active_now");
       popup.classList.remove("active_now");
-    }
-    if (!popupContent.classList.contains("active_now")) {
       popupContent.classList.add("active_now");
     }
     myFullpage.setAllowScrolling(true);
