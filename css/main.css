@@ -880,6 +880,15 @@
 #fullpage .intro .center_text p {
   font-size: 32px;
 }
+#fullpage .intro .center_text.active_now h1 {
+  animation: introAniTop 1s;
+}
+#fullpage .intro .center_text.active_now .line {
+  animation: fadeIn 1s;
+}
+#fullpage .intro .center_text.active_now p {
+  animation: introAniDown 1s;
+}
 #fullpage .east_course {
   position: relative;
   background-image: url(../img/east_course.png);
@@ -1056,6 +1065,12 @@
   line-height: 32px;
   font-size: 22px;
 }
+#fullpage .common_center_text.active_now .left_section {
+  animation: aniLeft 1s;
+}
+#fullpage .common_center_text.active_now .right_section {
+  animation: aniRight 1s;
+}
 #fullpage .common_center_text .right_section {
   display: flex;
   align-items: flex-end;
@@ -1079,16 +1094,52 @@
 #fullpage .common_center_text .right_section .view:hover .arrow_right {
   transform: translateX(15px);
 }
-#fullpage .animation_text.active_now {
-  animation: fadeIn 1.5s;
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes introAniTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes introAniDown {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes aniLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes aniRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 @media (max-width: 1000px) {

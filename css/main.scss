@@ -1000,6 +1000,18 @@
       p {
         font-size: 32px;
       }
+
+      &.active_now {
+        h1 {
+          animation: introAniTop 1s;
+        }
+        .line {
+          animation: fadeIn 1s;
+        }
+        p {
+          animation: introAniDown 1s;
+        }
+      }
     }
   }
   .east_course {
@@ -1203,6 +1215,16 @@
         }
       }
     }
+    &.active_now {
+      .left_section {
+        animation: aniLeft 1s;
+      }
+    }
+    &.active_now {
+      .right_section {
+        animation: aniRight 1s;
+      }
+    }
     .right_section {
       display: flex;
       align-items: flex-end;
@@ -1231,18 +1253,59 @@
     }
   }
   .animation_text {
-    &.active_now {
-      animation: fadeIn 1.5s;
-    }
+    // &.active_now {
+    //   animation: fadeIn 1.5s;
+    // }
   }
 }
 
+// 애니메이션 모음
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes introAniTop {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes introAniDown {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes aniLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes aniRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
